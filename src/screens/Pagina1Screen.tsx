@@ -1,7 +1,8 @@
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import React, { useEffect } from 'react'
 import { Button, Text, View, TouchableOpacity } from 'react-native';
-import { styles } from '../theme/appTheme';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { colores, styles } from '../theme/appTheme';
 
 interface Props extends DrawerScreenProps<any, any> {}
 
@@ -10,10 +11,9 @@ export const Pagina1Screen = ({ navigation }: Props) => {
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Button 
-          title="Menú"
-          onPress={ ()=> navigation.toggleDrawer() }
-        />
+        <TouchableOpacity onPress={ ()=> navigation.toggleDrawer()}>
+          <Icon name="menu-outline" style={{ marginLeft: 10}} size={35} color={colores.primary}></Icon>
+        </TouchableOpacity>
       )
     })
   }, [])

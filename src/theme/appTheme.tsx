@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const colores = {
   primary: '#6638f0',
+  white: 'white' 
 }
 
 export const styles = StyleSheet.create({
@@ -40,9 +41,16 @@ export const styles = StyleSheet.create({
       marginHorizontal: 50,
     },
     menuBoton: {
-      marginVertical: 10
+      marginVertical: 10,
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: "flex-start",
+      alignItems: 'center',      
     },
     menuTexto: {
       fontSize: 20
+    },
+    menuIcon: {
+      marginRight: 10
     }
 });
