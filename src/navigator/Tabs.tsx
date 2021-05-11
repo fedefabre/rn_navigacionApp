@@ -63,7 +63,6 @@ const TabIOS = () => {
       tabBarOptions={{
         activeTintColor: colores.primary,
         style: {
-          borderTopColor: colores.primary,
           borderTopWidth: 0,
           elevation: 0
         },
