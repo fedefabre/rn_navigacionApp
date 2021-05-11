@@ -6,6 +6,7 @@ import Tab2Screen from '../screens/Tab2Screen';
 import { StackNavigator } from './StackNavigator';
 import { colores } from '../theme/appTheme';
 import { Platform, Text } from 'react-native';
+import { TopTapNavigator } from './TopTapNavigator';
 
 
 export const Tabs = () => {
@@ -32,7 +33,7 @@ const TabAndroid = () => {
             case 'Tab1Screen':
               iconName = 'T1'
               break;
-            case 'Tab2Screen':
+            case 'TopTapNavigator':
               iconName = 'T2'
               break;
             case 'StackNavigator':
@@ -45,7 +46,7 @@ const TabAndroid = () => {
       })}
     >
       <BottomTabAndroid.Screen name="Tab1Screen" options={{ title: 'Tab1' }} component={Tab1Screen} />
-      <BottomTabAndroid.Screen name="Tab2Screen" options={{ title: 'Tab2' }} component={Tab2Screen} />
+      <BottomTabAndroid.Screen name="TopTapNavigator" options={{ title: 'Tab2' }} component={TopTapNavigator} />
       <BottomTabAndroid.Screen name="StackNavigator" options={{ title: 'Tab3' }} component={StackNavigator} />
     </BottomTabAndroid.Navigator>
   );
@@ -77,7 +78,7 @@ const TabIOS = () => {
             case 'Tab1Screen':
               iconName = 'T1'
               break;
-            case 'Tab2Screen':
+            case 'TopTapNavigator':
               iconName = 'T2'
               break;
             case 'StackNavigator':
@@ -90,7 +91,7 @@ const TabIOS = () => {
       })}
     >
       <BottomTabIOS.Screen name="Tab1Screen" options={{ title: 'Tab1' }} component={Tab1Screen} />
-      <BottomTabIOS.Screen name="Tab2Screen" options={{ title: 'Tab2' }} component={Tab2Screen} />
+      <BottomTabIOS.Screen name="TopTapNavigator" options={{ title: 'Tab2' }} component={TopTapNavigator} />
       <BottomTabIOS.Screen name="StackNavigator" options={{ title: 'Tab3' }} component={StackNavigator} />
     </BottomTabIOS.Navigator>
   );
